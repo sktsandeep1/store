@@ -1,0 +1,39 @@
+.container {
+  background-color: rgb(58, 58, 73);
+  padding: 4rem 0;
+}
+.slider {
+  width: 90%;
+  margin: 3rem auto;
+  background-color: rgb(132, 141, 150);
+}
+
+.card {
+  padding: 2.5rem;
+  background-color: aquamarine;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.product_image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10% 10% 0 0;
+  border: 1px solid black;
+}
+
+.description {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.product_title {
+  font-size: 1.3rem;
+}
+
+/* Todo */
+/*
+1. make a perfect card 
+2. some styling in bullets (slider)
+3. some styling in arrow btn 
+*/
