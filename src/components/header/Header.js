@@ -5,8 +5,13 @@ import { FaLocationArrow } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { FaLuggageCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const item = useSelector((state) => {
+    return state.cart;
+  });
+
   return (
     <>
       <header>
@@ -48,7 +53,7 @@ const Header = () => {
             <div className="cart">
               <div className="icon">
                 <FaLuggageCart className="cartIcon" />
-                <span>0</span>
+                <span>{item.length}</span>
               </div>
               <span>Cart</span>
             </div>

@@ -1,0 +1,55 @@
+.container {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.product_cart {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.product_image {
+  width: 5rem;
+  height: 5rem;
+}
+
+.product_title {
+  font-size: 1.2rem;
+}
+
+.product_price {
+  font-size: 1.2rem;
+}
+
+.product_quantity {
+  font-size: 1.2rem;
+}
+
+.product_delete_icon {
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+.product_total {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cart_buyNow {
+  display: flex;
+  justify-content: end;
+}
+
+.buyNow {
+  margin-top: 0.5rem;
+  padding: 0.5rem 2rem;
+  display: inline-flex;
+  gap: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+}

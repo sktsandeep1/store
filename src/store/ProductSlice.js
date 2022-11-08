@@ -17,11 +17,12 @@ const ProductSlice = createSlice({
     },
   },
 });
+
 export const { setProducts, setStatus } = ProductSlice.actions;
 export default ProductSlice.reducer;
 
 export function fetchProducts() {
-  return async function fetchProductThunk(dispatch) {
+  return async function fetchProduct(dispatch) {
     dispatch(setStatus(STATUS.LOADING));
     try {
       const res = await fetch("https://fakestoreapi.com/products#");
@@ -34,3 +35,16 @@ export function fetchProducts() {
     }
   };
 }
+
+// const ActionTypes = {
+//   SELECTED_PRODUCTS: "SELECTED_PRODUCT",
+// };
+
+// export const SelectedProducts = (state = {}, { type, payload }) => {
+//   switch (type) {
+//     case ActionTypes.SELECTED_PRODUCT:
+//       return { ...state, ...payload };
+//     default:
+//       return state;
+//   }
+// };

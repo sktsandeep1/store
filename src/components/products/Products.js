@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { fetchProducts } from "../../store/ProductSlice";
 import { STATUS } from "../../store/StatusSlice";
 import { MdOutlineStarRate } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Products = () => {
   const dispatch = useDispatch();
   const { data: products, status } = useSelector((state) => state.product);
@@ -18,35 +19,36 @@ const Products = () => {
     return <h1>Something went wrong</h1>;
   }
 
-  const truncate = (str, n) => {
-    return str?.length > n ? str.substr(0, n - 1) + "" : str;
-  };
-
   return (
     <>
-      <div className={style.wrapper}>
+      <div className={style.products_wrapper}>
         {products.map((product) => {
           return (
-            <div className={style.card} key={product.id}>
-              <img
-                src={product.image}
-                alt="productImage"
-                className={style.product_image}
-              />
-              <div className={style.product_description}>
-                <strong className={style.product_title}>
-                  {truncate(product?.title, 20)}
-                </strong>
-                <p>
-                  <MdOutlineStarRate />
-                  <span>{product.rating.rate}</span>
-                </p>
-                <p className={style.product_price}>
-                  <span>Price </span>
-                  <span>₹{product.price}</span>
-                </p>
+            <Link to={`/products/${product.id}`} key={product.id}>
+              <div className={style.card}>
+                <img
+                  src={product.image}
+                  alt="productImage"
+                  className={style.product_image}
+                />
+                <div className={style.product_details}>
+                  <strong className={style.product_title}>
+                    {product.title.substring(0, 18)}...
+                  </strong>
+                  <div className={style.product_detail_item}>
+                    <p className={style.product_rating}>
+                      <MdOutlineStarRate />
+                      <span>{product.rating.rate}</span>
+                      <span> Rating </span>
+                    </p>
+                    <p className={style.product_price}>
+                      <span>Price: </span>
+                      <span>₹{product.price}</span>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -55,5 +57,3 @@ const Products = () => {
 };
 
 export default Products;
-
-// men's clothing, jewelery, electronics, women's clothing

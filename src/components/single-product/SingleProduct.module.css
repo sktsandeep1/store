@@ -1,0 +1,79 @@
+.SingleProductSection {
+  width: 80%;
+  margin: 2rem auto;
+}
+.backBtn {
+  margin: 1rem auto;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.container_SingleProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(184, 189, 187);
+  padding: 1rem 3rem;
+}
+
+.product_image {
+  width: 30%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.details {
+  width: 50%;
+  margin: 0 auto;
+
+  padding: 1rem;
+}
+
+.product_category {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.product_rating {
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.product_star {
+  color: rgb(255, 255, 14);
+}
+
+.product_price {
+  font-size: 1.5rem;
+}
+
+.description {
+  line-height: 1.2;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+}
+
+.btns {
+  margin-top: 2rem;
+  display: inline-flex;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+.addToCart,
+.buyNow {
+  padding: 1rem 2rem;
+  display: inline-flex;
+  gap: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+}

@@ -1,4 +1,4 @@
-.wrapper {
+.products_wrapper {
   width: 80%;
   margin: 2rem auto;
   display: grid;
@@ -16,4 +16,30 @@
 .product_image {
   width: 10rem;
   height: 10rem;
+}
+
+.product_details {
+  margin-top: 1rem;
+  color: black;
+}
+/* .product_detail_item {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+} */
+
+.product_rating {
+  display: inline-flex;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.product_price {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
