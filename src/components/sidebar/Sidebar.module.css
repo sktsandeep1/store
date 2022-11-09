@@ -1,0 +1,57 @@
+aside {
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.sidebarItem {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: var(--grey-2);
+}
+
+.sidebarItem:hover {
+  color: var(--dark);
+  background-color: var(--white);
+  transition: all 400ms ease;
+}
+
+.filter {
+  margin: 2rem 0 0 1rem;
+  line-height: 1.5;
+}
+
+.filterPrice {
+  color: var(--grey-2);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.filterPrice > input {
+  margin-right: 1rem;
+}
+
+.filterRating {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-2);
+}
+.filterRating > span {
+  font-size: 1.2rem;
+}
+
+.filterFaStar {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.filterbtn {
+  margin: 2rem 2.5rem;
+  padding: 1rem 2rem;
+}
+
+/* Need to fix sidebar */

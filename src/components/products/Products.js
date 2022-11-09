@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchProducts } from "../../store/ProductSlice";
 import { STATUS } from "../../store/StatusSlice";
-import { MdOutlineStarRate } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Products = () => {
   const dispatch = useDispatch();
@@ -31,15 +31,15 @@ const Products = () => {
                   alt="productImage"
                   className={style.product_image}
                 />
+
                 <div className={style.product_details}>
                   <strong className={style.product_title}>
                     {product.title.substring(0, 18)}...
                   </strong>
                   <div className={style.product_detail_item}>
                     <p className={style.product_rating}>
-                      <MdOutlineStarRate />
+                      <FaStar className={style.FaStar} />
                       <span>{product.rating.rate}</span>
-                      <span> Rating </span>
                     </p>
                     <p className={style.product_price}>
                       <span>Price: </span>

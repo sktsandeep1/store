@@ -8,9 +8,19 @@
 }
 
 .card {
-  border: 1px solid black;
   padding: 2rem;
   cursor: pointer;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.card:hover {
+  background: transparent;
+  transition: all 400ms ease;
 }
 
 .product_image {
@@ -36,6 +46,10 @@
   margin-top: 0.5rem;
   font-weight: 500;
   font-size: 0.9rem;
+}
+
+.FaStar {
+  color: yellow;
 }
 
 .product_price {

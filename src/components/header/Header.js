@@ -1,10 +1,10 @@
-import "./Header.css";
+import style from "./Header.module.css";
 import { Link } from "react-router-dom";
 import store from "../../assets/store.png";
 import { FaLocationArrow } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
-import { FaLuggageCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -17,45 +17,45 @@ const Header = () => {
       <header>
         <nav>
           <Link to="/">
-            <div className="logo">
+            <div className={style.logo}>
               <img src={store} alt="" />
               <span>STORE</span>
             </div>
           </Link>
 
-          <div className="address">
+          <div className={style.address}>
             <FaLocationArrow />
             <span>address</span>
           </div>
-          <div className="search">
+          <div className={style.search}>
             <input
               type="text"
               name="search"
               id="search"
               placeholder="Search any thing....."
             />
-            <button className="searchButton">
+            <button className={style.searchButton}>
               <FaSearch />
             </button>
           </div>
-          <div className="user">
+          <div className={style.user}>
             <FaUserAlt />
             <span>Jigness</span>
           </div>
 
           <Link to="/orders">
-            <div className="orders">
+            <div className={style.orders}>
               <span>Returns & Orders</span>
             </div>
           </Link>
 
           <Link to="/Cart">
-            <div className="cart">
-              <div className="icon">
-                <FaLuggageCart className="cartIcon" />
+            <div className={style.cart}>
+              <div className={style.icon}>
+                <FaShoppingCart className={style.cartIcon} />
                 <span>{item.length}</span>
               </div>
-              <span>Cart</span>
+              {/* <span>Cart</span> */}
             </div>
           </Link>
         </nav>

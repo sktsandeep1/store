@@ -17,7 +17,6 @@ const SingleProduct = () => {
     dispatch(add(product));
   };
 
-  console.log(product);
   if (!product) {
     return "sorry, no matching product found";
   }
@@ -33,7 +32,7 @@ const SingleProduct = () => {
         />
         <div className={style.details}>
           <h3 className={style.product_category}>{product.category}</h3>
-          <h1>{product.title}</h1>
+          <h1>{product.title.substring(0, 40)}</h1>
           <p className={style.product_rating}>
             <span>{product.rating.rate}</span>
             <span>
@@ -48,6 +47,13 @@ const SingleProduct = () => {
           <p className={style.description}>
             {product.description.substring(0, 200)}...
           </p>
+
+          {/* <div className={style.product_qty}>
+            <button className={style.btn_qty}>
+              <span>Qty:</span>
+              <input type="number" />
+            </button>
+          </div> */}
 
           <div className={style.btns}>
             <button

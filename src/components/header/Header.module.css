@@ -1,3 +1,6 @@
+header {
+  background-color: var(--dark);
+}
 nav {
   width: 80%;
   margin: 0 auto;
@@ -11,6 +14,15 @@ nav {
 :is(.logo, .address, .searchButton, .user, .orders, .cart) {
   cursor: pointer;
 }
+
+:is(.logo > span, .address, .user, .orders, .cart) {
+  color: var(--beige);
+}
+
+:is(.logo > span, .address, .user, .orders):hover {
+  color: var(--grey);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -55,22 +67,32 @@ nav {
   gap: 0.5rem;
 }
 
+.orders {
+}
+
 .cart {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   position: relative;
-  color: #000;
+  border: 2px solid var(--beige);
+  border-radius: 50%;
+  padding: 0.5rem;
 }
 
 .cartIcon {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: var(--beige);
 }
 .icon > span {
   position: absolute;
-  background-color: aliceblue;
-  top: -49%;
-  left: 14%;
-  font-size: 2rem;
-  font-weight: 300;
+  top: -13%;
+  left: 67%;
+  background-color: var(--beige);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 50%;
+  color: var(--dark);
+  padding: 0.2rem 0.6rem;
 }
